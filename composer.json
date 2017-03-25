@@ -1,0 +1,15 @@
+{
+    "name": "robincsamuel/laravel-msg91",
+    "description": "Package for MSG91 sms API",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin C Samuel",
+            "email": "hi@robinz.in"
+        }
+    ],
+    "minimum-stability": "dev"
+}

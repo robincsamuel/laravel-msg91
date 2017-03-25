@@ -1,12 +1,12 @@
-#Laravel 5 Msg91 package
+# Laravel 5 Msg91 package
 
-###About
+### About
 
 MSG91 is a bulk SMS service provider offers transactional & promotional bulk SMS solutions internationally. This package provide the basic function, messsaging API.
 
 [Documentation](https://control.msg91.com/apidoc/textsms/send-sms.php)
 
-###Installation
+### Installation
 
 Installation via composer...
 
@@ -37,7 +37,7 @@ Put the credentials in ENV, with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91
 $ php artisan vendor:publish
 ```
 
-###Usage
+### Usage
 
 1. Send an SMS to one or more numbers. See the package config file to set up API access.
 

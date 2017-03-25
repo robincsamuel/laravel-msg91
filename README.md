@@ -31,7 +31,7 @@ Next, locate the `aliases` key and add the following line:
 ```php
 LaravelMsg91' => RobinCSamuel\LaravelMsg91\Facades\LaravelMsg91::class,
 ```
-Put the credentials in ENV, with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91_ROUTE`, 'MSG91_COUNTRY'. If you wan't to customize this, publish the default configuration which will create a config file  `config/msg91.php`.
+Put the credentials in ENV, with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91_ROUTE`, `MSG91_COUNTRY`. If you wan't to customize this, publish the default configuration which will create a config file  `config/msg91.php`.
 
 ```bash
 $ php artisan vendor:publish

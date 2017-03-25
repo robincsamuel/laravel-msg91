@@ -11,5 +11,13 @@
             "email": "hi@robinz.in"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-4": {
+            "RobinCSamuel\\LaravelMsg91\\": "src/"
+        }
+    }
 }

@@ -47,12 +47,6 @@ $ php artisan vendor:publish
 
     $result = LaravelMsg91::message(919090909090, 'This is a test message');
 
-    ```
-
-    Or
-
-    ```php
-
     $result = LaravelMsg91::message(array('919090909090', '919090909091'), 'This is a test message to multiple recepients');
 
     ```
@@ -60,27 +54,27 @@ $ php artisan vendor:publish
 
 	```php
 
-	LaravelMsg91::sendOtp(919090909090, 1290);
+	$result = LaravelMsg91::sendOtp(919090909090, 1290);
 
-	LaravelMsg91::sendOtp(919090909090, 1290, "Your otp for phone verification is 1290");
+	$result = LaravelMsg91::sendOtp(919090909090, 1290, "Your otp for phone verification is 1290");
 	```
 
 3. Resend OTP
 
 	```php
 
-	LaravelMsg91::resendOtp(919090909090);
+	$result = LaravelMsg91::resendOtp(919090909090);
 
-	LaravelMsg91::resendOtp(919090909090, 'voice');
+	$result = LaravelMsg91::resendOtp(919090909090, 'voice');
 	```
 
 3. Verify OTP
 
 	```php
 
-	LaravelMsg91::verifyOtp(919090909090, 1290); // returns true or false
+	$result = LaravelMsg91::verifyOtp(919090909090, 1290); // returns true or false
 
-	LaravelMsg91::verifyOtp(919090909090, 1290, ['raw' => true]); // returns what msg91 replies (includes error message & type)
+	$result = LaravelMsg91::verifyOtp(919090909090, 1290, ['raw' => true]); // returns what msg91 replies (includes error message & type)
 	```
 
 ### License

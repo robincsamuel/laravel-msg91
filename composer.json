@@ -4,6 +4,7 @@
     "require": {
         "guzzlehttp/guzzle": "^6.2"
     },
+    "keywords": ["laravel-msg91", "msg91 laravel", "msg91 laravel package", "laravel package", "laravel sms package", "sms api", "text api"],
     "license": "MIT",
     "authors": [
         {

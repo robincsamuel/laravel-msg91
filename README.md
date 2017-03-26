@@ -8,6 +8,10 @@ MSG91 is a bulk SMS service provider offers transactional & promotional bulk SMS
 
 [Documentation - sendOTP](https://control.msg91.com/apidoc/sendotp/send-otp.php)
 
+### Registration
+
+[Sign up for Msg91](https://msg91.com/signup) and get the authkey from your account. You can find the `authkey` from `Dashboard > API` after signing in.
+
 ### Installation
 
 Installation via composer
@@ -33,7 +37,7 @@ Next, locate the `aliases` key and add the following line:
 ```php
 LaravelMsg91' => RobinCSamuel\LaravelMsg91\Facades\LaravelMsg91::class,
 ```
-Put the credentials in ENV, with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91_ROUTE`, `MSG91_COUNTRY`. If you wan't to customize this, publish the default configuration which will create a config file  `config/msg91.php`.
+Put the credentials & preferences in ENV with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91_ROUTE`, `MSG91_COUNTRY`. If you wan't to customize this, publish the default configuration which will create a config file  `config/msg91.php`.
 
 ```bash
 $ php artisan vendor:publish

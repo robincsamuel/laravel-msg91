@@ -10,7 +10,7 @@ MSG91 is a bulk SMS service provider offers transactional & promotional bulk SMS
 
 ### Registration
 
-[Sign up for Msg91](https://msg91.com/signup) and get the authkey from your account. You can find the `authkey` from `Dashboard > API` after signing in.
+[Sign up for Msg91](https://msg91.com/signup) and get the auth key from your account. You can find the `auth key` from `Dashboard > API` after signing in.
 
 ### Installation
 

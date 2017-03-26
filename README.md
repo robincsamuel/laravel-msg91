@@ -2,13 +2,15 @@
 
 ### About
 
-MSG91 is a bulk SMS service provider offers transactional & promotional bulk SMS solutions internationally. This package provide the basic function, messsaging API.
+MSG91 is a bulk SMS service provider offers transactional & promotional bulk SMS solutions internationally. This package provide the text SMS & SendOTP functionalities.
 
-[Documentation](https://control.msg91.com/apidoc/textsms/send-sms.php)
+[Documentation - Text SMS](https://control.msg91.com/apidoc/textsms/send-sms.php)
+
+[Documentation - sendOTP](https://control.msg91.com/apidoc/sendotp/send-otp.php)
 
 ### Installation
 
-Installation via composer...
+Installation via composer
 
 Add `robincsamuel/laravel-msg91` to your composer requirements:
 
@@ -54,6 +56,32 @@ $ php artisan vendor:publish
     $result = LaravelMsg91::message(array('919090909090', '919090909091'), 'This is a test message to multiple recepients');
 
     ```
+2. Send OTP
+
+	```php
+
+	LaravelMsg91::sendOtp(919090909090, 1290);
+
+	LaravelMsg91::sendOtp(919090909090, 1290, "Your otp for phone verification is 1290");
+	```
+
+3. Resend OTP
+
+	```php
+
+	LaravelMsg91::resendOtp(919090909090);
+
+	LaravelMsg91::resendOtp(919090909090, 'voice');
+	```
+
+3. Verify OTP
+
+	```php
+
+	LaravelMsg91::verifyOtp(919090909090, 1290); // returns true or false
+
+	LaravelMsg91::verifyOtp(919090909090, 1290, ['raw' => true]); // returns what msg91 replies (includes error message & type)
+	```
 
 ### License
 

@@ -20,7 +20,7 @@ Add `robincsamuel/laravel-msg91` to your composer requirements:
 
 ```php
 "require": {
-    "robincsamuel/laravel-msg91": "~1"
+    "robincsamuel/laravel-msg91": "dev-master"
 }
 ```
 

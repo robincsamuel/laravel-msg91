@@ -179,7 +179,7 @@ class LaravelMsg91 {
 		if(isset($opts['raw']) && $opts['raw'] == true){
 			return json_decode($response->getBody());
 		} else {
-			return json_decode($response->getBody())->msgType == 'success' ? true : false;
+			return json_decode($response->getBody())->type == 'success' ? true : false;
 		}
 	}
 
@@ -197,7 +197,7 @@ class LaravelMsg91 {
 			throw new \Exception('Phone number should be digits only');
 
 		$data['mobile'] = $recipient;
-		$data['type'] = $type;
+		$data['retrytype'] = $type;
 
 		$data['authkey'] = $this->auth_key;
 		$response = $this->guzzle->get('retryotp.php', ['query' =>$data]);

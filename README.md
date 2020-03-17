@@ -1,4 +1,5 @@
 # Laravel 5 Msg91 package
+[![Latest Stable Version](http://img.shields.io/badge/Latest%20Stable-1.0.1-blue.svg)](https://packagist.org/packages/robincsamuel/laravel-msg91)
 
 ### About
 

@@ -62,9 +62,10 @@ class LaravelMsg91 {
 		$this->auth_key = config('laravel-msg91.auth_key');
 		$this->sender_id = config('laravel-msg91.sender_id');
 		$this->route = config('laravel-msg91.route');
-		$this->limit_credit = config('laravel-msg91.limit_credit') ? :false;
-		$this->country = config('laravel-msg91.country') ?:0;
-		$this->guzzle = new GuzzleClient(["base_uri" => "https://control.msg91.com/api/"]);
+		$this->limit_credit = config('laravel-msg91.limit_credit');
+		$this->country = config('laravel-msg91.country');
+		$base_uri = config('laravel-msg91.base_uri') ? config('laravel-msg91.base_uri') : 'https://control.msg91.com/api/'; 
+		$this->guzzle = new GuzzleClient(["base_uri" => $base_uri ]);
 	}
 
 

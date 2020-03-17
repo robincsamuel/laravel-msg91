@@ -26,7 +26,7 @@ Add `robincsamuel/laravel-msg91` to your composer requirements:
 
 Now run `composer update`
 
-Once the package is installed, open your `app/config/app.php` configuration file and locate the `providers` key.  Add the following line to the end:
+Once the package is installed, open your `app/config/app.php` configuration file and locate the `providers` key. Add the following line to the end:
 
 ```php
 RobinCSamuel\LaravelMsg91\LaravelMsg91ServiceProvider::class
@@ -37,7 +37,12 @@ Next, locate the `aliases` key and add the following line:
 ```php
 'LaravelMsg91' => RobinCSamuel\LaravelMsg91\Facades\LaravelMsg91::class,
 ```
-Put the credentials & preferences in ENV with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91_ROUTE`, `MSG91_COUNTRY`. If you wan't to customize this, publish the default configuration which will create a config file  `config/msg91.php`.
+
+Put the credentials & preferences in ENV with the keys `MSG91_KEY`, `MSG91_SENDER_ID`, `MSG91_ROUTE`, `MSG91_COUNTRY`.
+
+Optionally, you can use your own base uri by setting `MSG91_BASE_URI` (for resellers)
+
+If you wan't to customize this, publish the default configuration which will create a config file `config/msg91.php`.
 
 ```bash
 $ php artisan vendor:publish
@@ -47,39 +52,40 @@ $ php artisan vendor:publish
 
 1. Send an SMS to one or more numbers. See the package config file to set up API access.
 
-    ```php
+   ```php
 
-    $result = LaravelMsg91::message(919090909090, 'This is a test message');
+   $result = LaravelMsg91::message(919090909090, 'This is a test message');
 
-    $result = LaravelMsg91::message(array('919090909090', '919090909091'), 'This is a test message to multiple recepients');
+   $result = LaravelMsg91::message(array('919090909090', '919090909091'), 'This is a test message to multiple recepients');
 
-    ```
+   ```
+
 2. Send OTP
 
-	```php
+   ```php
 
-	$result = LaravelMsg91::sendOtp(919090909090, 1290);
+   $result = LaravelMsg91::sendOtp(919090909090, 1290);
 
-	$result = LaravelMsg91::sendOtp(919090909090, 1290, "Your otp for phone verification is 1290");
-	```
+   $result = LaravelMsg91::sendOtp(919090909090, 1290, "Your otp for phone verification is 1290");
+   ```
 
 3. Resend OTP
 
-	```php
+   ```php
 
-	$result = LaravelMsg91::resendOtp(919090909090);
+   $result = LaravelMsg91::resendOtp(919090909090);
 
-	$result = LaravelMsg91::resendOtp(919090909090, 'voice');
-	```
+   $result = LaravelMsg91::resendOtp(919090909090, 'voice');
+   ```
 
-3. Verify OTP
+4. Verify OTP
 
-	```php
+   ```php
 
-	$result = LaravelMsg91::verifyOtp(919090909090, 1290); // returns true or false
+   $result = LaravelMsg91::verifyOtp(919090909090, 1290); // returns true or false
 
-	$result = LaravelMsg91::verifyOtp(919090909090, 1290, ['raw' => true]); // returns what msg91 replies (includes error message & type)
-	```
+   $result = LaravelMsg91::verifyOtp(919090909090, 1290, ['raw' => true]); // returns what msg91 replies (includes error message & type)
+   ```
 
 ### License
 

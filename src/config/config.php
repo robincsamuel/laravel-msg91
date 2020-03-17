@@ -2,6 +2,8 @@
 
 return array(
 
+	'base_uri' => env('MSG91_BASE_URI', 'https://control.msg91.com/api/'),
+
 	/* Auth key from msg91  (required) */
 	'auth_key' => env('MSG91_KEY', ''),
 

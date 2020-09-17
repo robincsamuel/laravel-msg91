@@ -1,5 +1,5 @@
 {
-    "name": "robincsamuel/laravel-msg91",
+    "name": "devduttabain/laravel-msg91",
     "description": "Package for MSG91 sms API",
     "require": {
         "guzzlehttp/guzzle": "^6.2"
@@ -18,7 +18,7 @@
             "src"
         ],
         "psr-4": {
-            "RobinCSamuel\\LaravelMsg91\\": "src/"
+            "DevD\\LaravelMsg91\\": "src/"
         }
     }
 }

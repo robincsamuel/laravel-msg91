@@ -10,6 +10,10 @@
         {
             "name": "Robin C Samuel",
             "email": "hi@robinz.in"
+        },
+        {
+            "name": "Devdutta Bain",
+            "email": "namste@dev.duttaba.in"
         }
     ],
     "minimum-stability": "dev",

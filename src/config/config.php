@@ -19,4 +19,7 @@ return array(
 	/* Credit limit, if true message will be limted to 1 credit (optional) */
 	'limit_credit' => env('MSG91_LIMIT_CREDIT', false),
 
+	/* Guzzle Verify, if false there'll be no ssl checking (optional) */
+	'guzzle_verify' => env('MSG91_GUZZLE_VERIFY', true),
+
 );

@@ -82,7 +82,7 @@ class LaravelMsg91 {
 	 *
 	 */
 	public function message($recipients, $message, $opts=[]){
-		$data = collect($opts)->only('flash', 'sender', 'route', 'country', 'schtime', 'unicode', 'campaign', 'response', 'group_id')->toArray();
+		$data = collect($opts)->only('flash', 'sender', 'route', 'country', 'schtime', 'unicode', 'campaign', 'response', 'group_id','DLT_TE_ID','dev_mode')->toArray();
 
 		if(!isset($data['sender'])) $data['sender'] = $this->sender_id;
 		if(!isset($data['route'])) $data['route'] = $this->route;
